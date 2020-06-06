@@ -1,0 +1,278 @@
+// Global Values
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+}
+
+p {
+	display: inline-block;
+	font-weight: 300;
+	color: hsl(240, 18%, 50%);
+	font-size: 1.9rem;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: hsl(240, 38%, 20%);
+}
+
+h3 {
+	font-weight: 500;
+	color: hsl(240, 18%, 77%);
+}
+
+::selection {
+	color: #ffffff;
+	background-color: #9975d0;
+}
+
+// Top Containers
+
+.top-container1,
+.top-container2 {
+	margin-top: 2.5rem;
+	padding-top: 2rem;
+
+	.image {
+		padding: 2rem 5rem 6rem;
+		position: relative;
+
+		.buttons {
+			display: flex;
+			background-color: #ffffff;
+			border-radius: 2rem;
+			position: absolute;
+			bottom: 13%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			button {
+				border: none;
+				border-radius: 2rem;
+				padding: 1rem;
+				background: #ffffff;
+				width: 50%;
+			}
+
+			.left {
+				background: url('../images/icon-prev.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				padding: 1rem 1.5rem 1rem 1rem;
+			}
+
+			.right {
+				background: url('../images/icon-next.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				padding: 1rem 1rem 1rem 1rem;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+
+		box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.bg {
+	background: url('../images/pattern-bg.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+// Review Section
+
+.comment1,
+.comment2 {
+	width: 100%;
+	position: relative;
+	margin: 2rem auto;
+	padding: 3rem 1.5rem;
+	text-align: center;
+
+	.name {
+		margin: 3rem auto 6rem;
+	}
+}
+
+.quote {
+	background: url('../images/pattern-quotes.svg');
+	background-repeat: no-repeat;
+	background-size: 20%;
+	background-position: center top;
+}
+
+.bottom-curve {
+	position: relative;
+	z-index: -1;
+
+	svg {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+// Footer Section
+
+footer {
+	background: #f4f4fc;
+}
+
+// Hide Property
+.hide {
+	display: none;
+}
+
+// Animate Property
+.animate {
+	animation: containerFade ease-in-out 0.5s;
+}
+
+// Keryframes
+@keyframes containerFade {
+	from {
+		opacity: 30%;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+// Media Queries
+@media screen and (min-width: 400px) {
+	.image {
+		width: 85%;
+		margin: auto;
+	}
+
+	.bg {
+		background-size: 85%;
+		background-position: center;
+	}
+
+	.comment1,
+	.comment2 {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.bottom-curve {
+		width: 80%;
+	}
+
+	.buttons {
+		width: 20%;
+		height: 8%;
+		margin: auto;
+		top: 90%;
+	}
+
+	.image {
+		width: 70%;
+	}
+
+	.bg {
+		background-size: 73%;
+	}
+
+	.comment1,
+	.comment2 {
+		width: 60%;
+	}
+
+	.quote {
+		background-size: 15%;
+	}
+}
+@media screen and (min-width: 1000px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		height: 100vh;
+	}
+	.top-container1,
+	.top-container2 {
+		grid-column: 2/4;
+		grid-row: 1/2;
+		img {
+			padding-top: 1rem;
+		}
+	}
+
+	.bg {
+		background-size: 75%;
+		background-position: top;
+	}
+
+	.comment1,
+	.comment2 {
+		margin-left: 15%;
+		grid-column: 1/3;
+		grid-row: 1/2;
+		margin-top: 15%;
+		width: 64%;
+		text-align: left;
+		padding: 3rem 0 0;
+
+		P {
+			font-size: 2.5rem;
+		}
+	}
+
+	.name {
+		font-size: 1.1rem;
+		display: inline-block;
+
+		h2,
+		h3 {
+			display: inline-block;
+		}
+
+		h3 {
+			padding-left: 1rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	.buttons {
+		left: 29% !important;
+		bottom: 0 !important;
+		top: 75% !important;
+		height: 9%;
+	}
+
+	.quote {
+		background-position: 22% 0;
+		background-size: 20%;
+	}
+
+	.bottom-curve {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1145px) {
+	.comment1,
+	.comment2 {
+		margin-top: 20%;
+		padding-top: 6.5rem;
+		p {
+			font-size: 2.7rem;
+		}
+	}
+}

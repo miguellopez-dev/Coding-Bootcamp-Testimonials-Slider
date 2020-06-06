@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  display: inline-block;
+  font-weight: 300;
+  color: #696996;
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #202046;
+}
+
+h3 {
+  font-weight: 500;
+  color: #babacf;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: #9975d0;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #9975d0;
+}
+
+.top-container1,
+.top-container2 {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+}
+
+.top-container1 .image,
+.top-container2 .image {
+  padding: 2rem 5rem 6rem;
+  position: relative;
+}
+
+.top-container1 .image .buttons,
+.top-container2 .image .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.top-container1 .image .buttons button,
+.top-container2 .image .buttons button {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: #ffffff;
+  width: 50%;
+}
+
+.top-container1 .image .buttons .left,
+.top-container2 .image .buttons .left {
+  background: url("../images/icon-prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem 1.5rem 1rem 1rem;
+}
+
+.top-container1 .image .buttons .right,
+.top-container2 .image .buttons .right {
+  background: url("../images/icon-next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.top-container1 img,
+.top-container2 img {
+  width: 100%;
+  -webkit-box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bg {
+  background: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.comment1,
+.comment2 {
+  width: 100%;
+  position: relative;
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.comment1 .name,
+.comment2 .name {
+  margin: 3rem auto 6rem;
+}
+
+.quote {
+  background: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center top;
+}
+
+.bottom-curve {
+  position: relative;
+  z-index: -1;
+}
+
+.bottom-curve svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer {
+  background: #f4f4fc;
+}
+
+.hide {
+  display: none;
+}
+
+.animate {
+  -webkit-animation: containerFade ease-in-out 0.5s;
+          animation: containerFade ease-in-out 0.5s;
+}
+
+@-webkit-keyframes containerFade {
+  from {
+    opacity: 30%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes containerFade {
+  from {
+    opacity: 30%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .image {
+    width: 85%;
+    margin: auto;
+  }
+  .bg {
+    background-size: 85%;
+    background-position: center;
+  }
+  .comment1,
+  .comment2 {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .bottom-curve {
+    width: 80%;
+  }
+  .buttons {
+    width: 20%;
+    height: 8%;
+    margin: auto;
+    top: 90%;
+  }
+  .image {
+    width: 70%;
+  }
+  .bg {
+    background-size: 73%;
+  }
+  .comment1,
+  .comment2 {
+    width: 60%;
+  }
+  .quote {
+    background-size: 15%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+  }
+  .top-container1,
+  .top-container2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .top-container1 img,
+  .top-container2 img {
+    padding-top: 1rem;
+  }
+  .bg {
+    background-size: 75%;
+    background-position: top;
+  }
+  .comment1,
+  .comment2 {
+    margin-left: 15%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    margin-top: 15%;
+    width: 64%;
+    text-align: left;
+    padding: 3rem 0 0;
+  }
+  .comment1 P,
+  .comment2 P {
+    font-size: 2.5rem;
+  }
+  .name {
+    font-size: 1.1rem;
+    display: inline-block;
+  }
+  .name h2,
+  .name h3 {
+    display: inline-block;
+  }
+  .name h3 {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  .buttons {
+    left: 29% !important;
+    bottom: 0 !important;
+    top: 75% !important;
+    height: 9%;
+  }
+  .quote {
+    background-position: 22% 0;
+    background-size: 20%;
+  }
+  .bottom-curve {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1145px) {
+  .comment1,
+  .comment2 {
+    margin-top: 20%;
+    padding-top: 6.5rem;
+  }
+  .comment1 p,
+  .comment2 p {
+    font-size: 2.7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
