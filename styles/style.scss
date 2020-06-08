@@ -16,6 +16,10 @@ body {
 main {
 	overflow: hidden;
 	display: grid;
+	background-image: url('../images/pattern-curve.svg');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 85%;
 }
 
 p {
@@ -58,8 +62,9 @@ h3 {
 
 		.buttons {
 			display: flex;
+			justify-content: space-evenly;
 			background: #ffffff;
-			border-radius: 50%;
+			border-radius: 55%;
 
 			position: absolute;
 			bottom: 13%;
@@ -147,17 +152,6 @@ h3 {
 	background-position: center top;
 }
 
-.bottom-curve {
-	position: relative;
-	z-index: -1;
-
-	svg {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
-}
-
 // Footer Section
 
 footer {
@@ -195,10 +189,6 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
-	.bottom-curve {
-		width: 80%;
-	}
-
 	.buttons {
 		width: 18%;
 		height: 8%;
@@ -228,6 +218,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		height: 100vh;
+		background-size: 45%;
 	}
 	.top-container1,
 	.top-container2 {
@@ -250,7 +241,7 @@ footer {
 		margin-left: 15%;
 		grid-column: 1/3;
 		grid-row: 1/2;
-		margin-top: 15%;
+		margin-top: 25%;
 		width: 64%;
 		text-align: left;
 		padding: 3rem 0 0;
@@ -287,16 +278,12 @@ footer {
 		background-position: 22% 0;
 		background-size: 20%;
 	}
-
-	.bottom-curve {
-		width: 150%;
-	}
 }
 
 @media screen and (min-width: 1145px) {
 	.comment1,
 	.comment2 {
-		margin-top: 15%;
+		margin-top: 17%;
 		padding-top: 6.5rem;
 		p {
 			font-size: 3.2rem;
