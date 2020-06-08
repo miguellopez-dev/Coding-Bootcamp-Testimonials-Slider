@@ -21,7 +21,7 @@ main {
 p {
 	display: inline-block;
 	font-weight: 300;
-	color: hsl(240, 18%, 50%);
+	color: hsl(240, 18%, 40%);
 	font-size: 1.9rem;
 }
 
@@ -59,7 +59,8 @@ h3 {
 		.buttons {
 			display: flex;
 			background: #ffffff;
-			border-radius: 2rem;
+			border-radius: 50%;
+
 			position: absolute;
 			bottom: 13%;
 			left: 50%;
@@ -67,17 +68,25 @@ h3 {
 
 			button {
 				border: none;
-				border-radius: 2rem;
+				border-top-left-radius: 55%;
+				border-bottom-left-radius: 55%;
 				padding: 1rem;
 				background: #ffffff;
 				width: 50%;
+			}
+
+			button:nth-child(2) {
+				border-top-right-radius: 55%;
+				border-bottom-right-radius: 55%;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
 			}
 
 			.left {
 				background: url('../images/icon-prev.svg');
 				background-repeat: no-repeat;
 				background-position: center;
-				padding: 2rem 2rem 2rem 1.5rem;
+				padding: 1rem;
 				cursor: pointer;
 			}
 
@@ -85,7 +94,8 @@ h3 {
 				background: url('../images/icon-next.svg');
 				background-repeat: no-repeat;
 				background-position: center;
-				padding: 2rem;
+				padding: 1rem;
+
 				cursor: pointer;
 			}
 		}
@@ -94,7 +104,7 @@ h3 {
 	img {
 		width: 100%;
 
-		box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
 	}
 }
 .top-container2 {
@@ -190,7 +200,7 @@ footer {
 	}
 
 	.buttons {
-		width: 20%;
+		width: 18%;
 		height: 8%;
 		margin: auto;
 		top: 90%;
@@ -270,7 +280,7 @@ footer {
 		left: 29% !important;
 		bottom: 0 !important;
 		top: 75% !important;
-		height: 9%;
+		height: 8%;
 	}
 
 	.quote {
@@ -283,13 +293,17 @@ footer {
 	}
 }
 
-@media screen and (min-width: 1145px) and (max-width: 1200px) {
+@media screen and (min-width: 1145px) {
 	.comment1,
 	.comment2 {
-		margin-top: 20%;
+		margin-top: 15%;
 		padding-top: 6.5rem;
 		p {
-			font-size: 2.7rem;
+			font-size: 3.2rem;
 		}
+	}
+
+	.bg {
+		background-size: 72%;
 	}
 }
