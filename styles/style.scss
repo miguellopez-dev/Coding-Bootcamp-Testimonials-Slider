@@ -13,6 +13,11 @@ body {
 	font-family: 'Inter', sans-serif;
 }
 
+main {
+	overflow: hidden;
+	display: grid;
+}
+
 p {
 	display: inline-block;
 	font-weight: 300;
@@ -40,8 +45,12 @@ h3 {
 
 .top-container1,
 .top-container2 {
+	grid-column: 1/2;
+	grid-row: 1/2;
 	margin-top: 2.5rem;
 	padding-top: 2rem;
+	overflow: hidden;
+	transition: linear 0.5s;
 
 	.image {
 		padding: 2rem 5rem 6rem;
@@ -49,7 +58,7 @@ h3 {
 
 		.buttons {
 			display: flex;
-			background-color: #ffffff;
+			background: #ffffff;
 			border-radius: 2rem;
 			position: absolute;
 			bottom: 13%;
@@ -68,14 +77,16 @@ h3 {
 				background: url('../images/icon-prev.svg');
 				background-repeat: no-repeat;
 				background-position: center;
-				padding: 1rem 1.5rem 1rem 1rem;
+				padding: 2rem 2rem 2rem 1.5rem;
+				cursor: pointer;
 			}
 
 			.right {
 				background: url('../images/icon-next.svg');
 				background-repeat: no-repeat;
 				background-position: center;
-				padding: 1rem 1rem 1rem 1rem;
+				padding: 2rem;
+				cursor: pointer;
 			}
 		}
 	}
@@ -85,6 +96,9 @@ h3 {
 
 		box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
 	}
+}
+.top-container2 {
+	transform: translate(200%);
 }
 
 .bg {
@@ -97,15 +111,23 @@ h3 {
 
 .comment1,
 .comment2 {
+	grid-column: 1/2;
+	grid-row: 2/3;
 	width: 100%;
 	position: relative;
 	margin: 2rem auto;
 	padding: 3rem 1.5rem;
 	text-align: center;
+	overflow: hidden;
+	transition: linear 0.5s;
 
 	.name {
 		margin: 3rem auto 6rem;
 	}
+}
+
+.comment2 {
+	transform: translateX(300%);
 }
 
 .quote {
@@ -130,26 +152,6 @@ h3 {
 
 footer {
 	background: #f4f4fc;
-}
-
-// Hide Property
-.hide {
-	display: none;
-}
-
-// Animate Property
-.animate {
-	animation: containerFade ease-in-out 0.5s;
-}
-
-// Keryframes
-@keyframes containerFade {
-	from {
-		opacity: 30%;
-	}
-	to {
-		opacity: 100%;
-	}
 }
 
 // Media Queries
@@ -209,6 +211,8 @@ footer {
 	.top-container2 {
 		grid-column: 2/4;
 		grid-row: 1/2;
+		overflow: hidden;
+
 		img {
 			padding-top: 1rem;
 		}
@@ -228,6 +232,7 @@ footer {
 		width: 64%;
 		text-align: left;
 		padding: 3rem 0 0;
+		overflow: hidden;
 
 		P {
 			font-size: 2.5rem;
@@ -262,11 +267,11 @@ footer {
 	}
 
 	.bottom-curve {
-		width: 100%;
+		width: 150%;
 	}
 }
 
-@media screen and (min-width: 1145px) {
+@media screen and (min-width: 1145px) and (max-width: 1200px) {
 	.comment1,
 	.comment2 {
 		margin-top: 20%;

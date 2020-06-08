@@ -13,6 +13,12 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+main {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+}
+
 p {
   display: inline-block;
   font-weight: 300;
@@ -43,8 +49,17 @@ h3 {
 
 .top-container1,
 .top-container2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   margin-top: 2.5rem;
   padding-top: 2rem;
+  overflow: hidden;
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
 }
 
 .top-container1 .image,
@@ -58,7 +73,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #ffffff;
+  background: #ffffff;
   border-radius: 2rem;
   position: absolute;
   bottom: 13%;
@@ -81,7 +96,8 @@ h3 {
   background: url("../images/icon-prev.svg");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 1rem 1.5rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 1.5rem;
+  cursor: pointer;
 }
 
 .top-container1 .image .buttons .right,
@@ -89,7 +105,8 @@ h3 {
   background: url("../images/icon-next.svg");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 2rem;
+  cursor: pointer;
 }
 
 .top-container1 img,
@@ -97,6 +114,11 @@ h3 {
   width: 100%;
   -webkit-box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1), 0 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.top-container2 {
+  -webkit-transform: translate(200%);
+          transform: translate(200%);
 }
 
 .bg {
@@ -107,16 +129,30 @@ h3 {
 
 .comment1,
 .comment2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
   width: 100%;
   position: relative;
   margin: 2rem auto;
   padding: 3rem 1.5rem;
   text-align: center;
+  overflow: hidden;
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
 }
 
 .comment1 .name,
 .comment2 .name {
   margin: 3rem auto 6rem;
+}
+
+.comment2 {
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
 }
 
 .quote {
@@ -139,33 +175,6 @@ h3 {
 
 footer {
   background: #f4f4fc;
-}
-
-.hide {
-  display: none;
-}
-
-.animate {
-  -webkit-animation: containerFade ease-in-out 0.5s;
-          animation: containerFade ease-in-out 0.5s;
-}
-
-@-webkit-keyframes containerFade {
-  from {
-    opacity: 30%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-
-@keyframes containerFade {
-  from {
-    opacity: 30%;
-  }
-  to {
-    opacity: 100%;
-  }
 }
 
 @media screen and (min-width: 400px) {
@@ -224,6 +233,7 @@ footer {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
+    overflow: hidden;
   }
   .top-container1 img,
   .top-container2 img {
@@ -246,6 +256,7 @@ footer {
     width: 64%;
     text-align: left;
     padding: 3rem 0 0;
+    overflow: hidden;
   }
   .comment1 P,
   .comment2 P {
@@ -274,11 +285,11 @@ footer {
     background-size: 20%;
   }
   .bottom-curve {
-    width: 100%;
+    width: 150%;
   }
 }
 
-@media screen and (min-width: 1145px) {
+@media screen and (min-width: 1145px) and (max-width: 1200px) {
   .comment1,
   .comment2 {
     margin-top: 20%;
