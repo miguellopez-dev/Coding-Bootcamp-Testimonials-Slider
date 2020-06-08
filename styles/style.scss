@@ -154,6 +154,18 @@ footer {
 	background: #f4f4fc;
 }
 
+.attribution {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	&:hover {
+		color: #9975d0;
+	}
+}
+
 // Media Queries
 @media screen and (min-width: 400px) {
 	.image {
